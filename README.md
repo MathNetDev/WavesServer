@@ -1,4 +1,4 @@
-# Waves Server | Based on the Mathnet Project's Server #
+# Waves Server | Based on Mathnet's Server #
 
 [TOC]
 
