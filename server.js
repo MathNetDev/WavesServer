@@ -4,7 +4,6 @@ var port = 9000;
 var server_sockets = require('./server_sockets');
 var http = require('http');
 
-//Kevin
 //var express = require('express');
 //var app = express();
 //var server = http.createServer(app);
