@@ -44,7 +44,7 @@ connection.query('\
                  CREATE TABLE IF NOT EXISTS `' + dbconfig.database + '`.`' + dbconfig.group_table + '` ( \
                  `group_id` INT UNSIGNED NOT NULL, \
                  `class_id` INT UNSIGNED NOT NULL, \
-                 `date_created` DATETIME DEFAULT CURRENT_TIMESTAMP, \
+                 `date_created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, \
                  `group_color` VARCHAR(40),\
                  PRIMARY KEY (`group_id`, `class_id`), \
                  FOREIGN KEY (`class_id`) REFERENCES `'+ dbconfig.database +'`.`'+dbconfig.class_table+'`(class_id) \
