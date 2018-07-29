@@ -18,7 +18,7 @@ connection.query('\
                  `admin_id` INT AUTO_INCREMENT, \
                  `user_name` VARCHAR(40) NOT NULL, \
                  `password` VARCHAR(1000) NOT NULL, \
-                 `date_created` DATETIME DEFAULT CURRENT_TIMESTAMP, \
+                 `date_created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, \
                  PRIMARY KEY (`admin_id`) \
                  )');
 
@@ -30,7 +30,7 @@ connection.query('\
                  `admin_id` INT, \
                  `hashed_id` VARCHAR(8), \
                  `class_name` VARCHAR(40) NOT NULL, \
-                 `date_create` DATETIME DEFAULT CURRENT_TIMESTAMP, \
+                 `date_created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, \
                  PRIMARY KEY (`class_id`), \
                  UNIQUE INDEX `id_UNIQUE` (`class_id` ASC), \
                  UNIQUE INDEX `class_name` (`class_name` ASC), \
@@ -57,7 +57,7 @@ connection.query('\
                  `session_id` INT AUTO_INCREMENT, \
                  `admin_id` INT, \
                  `password` VARCHAR(1000) NOT NULL, \
-                 `date_created` DATETIME DEFAULT CURRENT_TIMESTAMP, \
+                 `date_created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, \
                  `last_updated` DATETIME, \
                  PRIMARY KEY (`session_id`), \
                  FOREIGN KEY (`admin_id`) REFERENCES `' + dbconfig.database + '`.`' + dbconfig.admin_table + '`(admin_id) \
@@ -70,7 +70,7 @@ connection.query('\
                  `log_id` INT AUTO_INCREMENT, \
                  `student_name` VARCHAR(200) NOT NULL, \
                  `log` VARCHAR(1000) NOT NULL, \
-                 `date_created` DATETIME DEFAULT CURRENT_TIMESTAMP, \
+                 `date_created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, \
                  `class_id` VARCHAR(40) NOT NULL, \
                  `group_id` INT, \
                  PRIMARY KEY (`log_id`) \
